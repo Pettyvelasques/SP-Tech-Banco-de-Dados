@@ -1,0 +1,18 @@
+CREATE TABLE despesa(
+id int primary key auto_increment,
+Descricao varchar(20),
+Categoria varchar(20),
+DtVenc varchar(10),
+Total varchar(10) NOT NULL
+);
+
+ALTER TABLE despesa ADD CONSTRAINT chkCategoria CHECK (Categoria IN ('Despesa Fixa', 'Despesa Variável'));
+
+INSERT INTO despesa VALUES 
+('Aluguel', 'Despesa Fixa', '10/09/2022', '1000,00'),
+('Alimentação, 'Despesa Variável', ' ', '290,00'),
+('Transporte', 'Despesa Fixa', '01/09/2022', '250,00'),
+('Telefone', 'Despesa Fixa', '15/09/2022', '59,90'),
+('Luz', 'Despesa Fixa', '10/09/2022', '107,00'),
+('Lazer', 'Despesa Variável', ' ', '100,00');
+
